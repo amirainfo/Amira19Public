@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/Amira19">
+<Resource
+    driverClassName="com.mysql.jdbc.Driver"
+    maxActive="100"
+    maxIdle="20"
+    name="jdbc/bdamira19"
+    username="amira"
+    password="d04m27"
+    type="javax.sql.DataSource"
+    url="jdbc:mysql://localhost:3306/bdamira19"
+    />
+        
+</Context>    
+
