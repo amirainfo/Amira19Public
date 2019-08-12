@@ -18,6 +18,7 @@ import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.RequestScoped;
 import javax.faces.component.html.HtmlForm;
+import javax.faces.component.html.HtmlOutputLabel;
 import javax.inject.Named;
 
 
@@ -36,6 +37,8 @@ public class Inicio extends FacesBean{
     public void inicializar() {
         
         this.getSessionBeanSeguranca().verificaSessao();
+        
+        this.getHolTituloModulo().setValue("Dashboard");
         
     }
     
@@ -59,6 +62,18 @@ public class Inicio extends FacesBean{
     public void setHfmFormulario(HtmlForm hfmFormulario) {
         this.hfmFormulario = hfmFormulario;
     }
+    
+    private HtmlOutputLabel holTituloModulo = new HtmlOutputLabel();
+
+    public HtmlOutputLabel getHolTituloModulo() {
+        return holTituloModulo;
+    }
+
+    public void setHolTituloModulo(HtmlOutputLabel holTituloModulo) {
+        this.holTituloModulo = holTituloModulo;
+    }
+    
+    
     
     
 }

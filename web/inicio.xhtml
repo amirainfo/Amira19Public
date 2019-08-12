@@ -13,18 +13,53 @@ and open the template in the editor.
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
      
     <ui:include src="componentes/cabecalho.xhtml"/>
-    
-    <h:body>
+    <ui:include src="componentes/topo.xhtml"/>
+    <ui:include src="componentes/sidebar.xhtml"/>
         
-        <ui:include src="componentes/topo.xhtml"/>
-        <ui:include src="componentes/sidebar.xhtml"/>
-        
-        <h:form binding="#{Inicio.hfmFormulario}" id="hfmFormulario">
-        
-        
+    <h:body id="page-top" class="fixed-nav sticky-footer"> 
+
+        <h:form binding="#{Inicio.hfmFormulario}" id="hfmFormulario" class="col-10 ml-auto px-4">
+
+            <div class="content-wrapper">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="inicio.ami"> Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+
+                            Pagina em branco
+
+                        </li>
+
+                    </ol>
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>TITULO DA PAGINAS</h1>
+                            <p>
+                                ESSE TXTO E DE ETESFASDL;AASDFL;ASDLFALDSF
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <footer class="footer bg-dark sticky-footer ">
+                    <div class="container">
+                        <div class="text-center">
+                            <small>Copyright Amira AWS - 2001-2019</small>
+                        </div>
+                    </div>
+
+
+                </footer>
+
+            </div>
+
         </h:form>
-        
-        
         
 
     </h:body>

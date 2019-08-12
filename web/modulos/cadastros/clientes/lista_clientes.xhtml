@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:include src="../../../componentes/cabecalho.xhtml"/>
+
+    <h:body>
+
+        <ui:include src="../../../componentes/topo.xhtml"/>
+        <ui:include src="../../../componentes/sidebar.xhtml"/>
+        
+        <h:form  id="hfmFormularioLista" role="hfmFormularioTituloModulo" class="col-10 ml-auto px-4">
+            
+            <div id="divTituloModulos" class="d-flex bg-dark pt-1 justify-content-between align-items-center mt-4 divTituloModulos">
+                <h:outputLabel value="Lista de Clientes" class="tituloModulo"/>
+                              
+                <h:commandButton class="btn btn-outline-light my-2 my-sm-0" value="Share">
+                    
+                </h:commandButton>
+
+            </div>
+        
+            
+            <div id="divLista" class="divLista d-flex bg-dark pt-1 justify-content-between align-items-center mt-4">
+              Ola teste de div
+            </div>
+        
+        </h:form>
+
+    </h:body>
+    
+</html>

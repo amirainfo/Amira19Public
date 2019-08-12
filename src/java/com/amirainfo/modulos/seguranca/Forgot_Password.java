@@ -1,6 +1,6 @@
 /*
  * AMIRA - WEB SYSTEMS - Todos os Direitos Reservados - 2001-2019
- * ARQUIVO: Autenticacao.java
+ * ARQUIVO: Forgot_Password.java
  * PROJETO: Amira BOOTSTRAP 2019
  * DATA CRIAÇÃO: 20/06/2019 08:00AM
  * DATA ALTERAÇÃO: 
@@ -32,13 +32,13 @@ import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 import javax.sql.rowset.CachedRowSet;
 
-@Named("modulos$seguranca$Autenticacao")
+@Named("modulos$seguranca$Forgot_Password")
 @RequestScoped
 @ManagedBean
-public class Autenticacao extends FacesBean {
+public class Forgot_Password extends FacesBean {
 
     //************************************************************** CONSTRUCTOR
-    public Autenticacao() {
+    public Forgot_Password() {
         
              
     }
@@ -367,14 +367,14 @@ public class Autenticacao extends FacesBean {
 
                             }
                             this.getSessionBeanEmpresas().setEmpresaLogin("");
-                            retorno = "/erro_login.ami";
+                            retorno = null;
                         }
                     } else {
                         this.getHihErro().setValue(comando.getErro());
                         this.getHihMetodo().setValue("hcbEntrar_action");
                         this.getHihProcedure().setValue("stpWamiValUsr");
                         this.hcbGravarLogErro_action();
-                        retorno = "/erro_login.ami";
+                        retorno = null;
                     }
                     resultado.close();
                     resultado = null;
@@ -384,14 +384,14 @@ public class Autenticacao extends FacesBean {
                     this.getHihMetodo().setValue("hcbEntrar_action1");
                     this.getHihProcedure().setValue("stpWamiValUsr");
                     this.hcbGravarLogErro_action();
-                    retorno = "/erro_login.ami";
+                    retorno = null;
                 }
             } catch (Exception e) {
                 this.getHihErro().setValue(e.getMessage());
                 this.getHihMetodo().setValue("hcbEntrar_action2");
                 this.getHihProcedure().setValue("stpWamiValUsr");
                 this.hcbGravarLogErro_action();
-                retorno = "/erro_login.ami";
+                retorno = null;
             } finally {
                 conexao.fechaConexao();
                 conexao = null;
@@ -410,7 +410,7 @@ public class Autenticacao extends FacesBean {
                 retorno = "/inicio.ami";
             } else {
                 this.getHihErro().setValue("Usuário / Senha Inválidos!");
-                retorno = "/erro_login.ami";
+                retorno = null;
             }
         }
         return retorno;
@@ -615,6 +615,7 @@ public class Autenticacao extends FacesBean {
         }
     }
 }
+
 
 
 

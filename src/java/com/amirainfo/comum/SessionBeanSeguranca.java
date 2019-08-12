@@ -60,7 +60,7 @@ public class SessionBeanSeguranca extends FacesBean implements Serializable {
                 Comando comando = new Comando("stpWamiLisAcoes", conexao.getConexao());
                 comando.setTipoComando(TipoComando.STORED_PROCEDURE);
                 comando.adicionaParametro("pSiglaModulo", Types.VARCHAR, modulo);
-                comando.adicionaParametro("pNivelAcesso", Types.NUMERIC, new Integer(this.getSessionBeanUsuario().getCodigoNivelAcesso()));
+                comando.adicionaParametro("pNivelAcesso", Types.NUMERIC, this.getSessionBeanUsuario().getCodigoNivelAcesso());
                 
                 CachedRowSet resultado = comando.executaConsultaCache();
                 
